@@ -71,11 +71,11 @@ public class PBXObjectReference: NSObject, Comparable, NSCopying {
     }
 
     /// Hash value.
-    override var hash: Int {
+    override public var hash: Int {
         return value.hashValue
     }
 
-    func copy(with _: NSZone? = nil) -> Any {
+    public func copy(with _: NSZone? = nil) -> Any {
         return type(of: self).init(self)
     }
 
@@ -94,7 +94,7 @@ public class PBXObjectReference: NSObject, Comparable, NSCopying {
     /// - Parameters:
     ///   - object: instance to be compared with.
     /// - Returns: true if the two instances are equal.
-    override func isEqual(_ object: Any?) -> Bool {
+    override public func isEqual(_ object: Any?) -> Bool {
         guard let object = object as? PBXObjectReference else { return false }
         return value == object.value
     }
@@ -105,7 +105,7 @@ public class PBXObjectReference: NSObject, Comparable, NSCopying {
     ///   - lhs: first instance to be compared.
     ///   - rhs: second instance to be compared.
     /// - Returns: comparison result.
-    static func < (lhs: PBXObjectReference, rhs: PBXObjectReference) -> Bool {
+    public static func < (lhs: PBXObjectReference, rhs: PBXObjectReference) -> Bool {
         return lhs.value < rhs.value
     }
 
