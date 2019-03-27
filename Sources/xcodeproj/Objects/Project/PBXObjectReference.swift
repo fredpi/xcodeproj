@@ -2,7 +2,7 @@ import Foundation
 import os.signpost
 
 /// Object used as a reference to PBXObjects from PBXObjects.
-class PBXObjectReference: NSObject, Comparable, NSCopying {
+public class PBXObjectReference: NSObject, Comparable, NSCopying {
     /// Boolean that indicates whether the id is temporary and needs
     /// to be regenerated when saving it to disk.
     private(set) var temporary: Bool
