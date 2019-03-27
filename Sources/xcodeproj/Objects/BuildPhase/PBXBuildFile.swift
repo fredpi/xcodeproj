@@ -5,7 +5,7 @@ public final class PBXBuildFile: PBXObject {
     // MARK: - Attributes
 
     /// Element file reference.
-    var fileReference: PBXObjectReference?
+    public var fileReference: PBXObjectReference?
 
     /// Returns the file the build file refers to.
     public var file: PBXFileElement? {
