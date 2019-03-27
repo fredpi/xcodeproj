@@ -11,7 +11,7 @@ public class PBXObject: Hashable, Decodable, Equatable, AutoEquatable {
     }
 
     /// The object reference in the project that contains it.
-    let reference: PBXObjectReference
+    public let reference: PBXObjectReference
 
     /**
      Used to differentiate this object from other equatable ones for the purposes of uuid generation.
